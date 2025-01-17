@@ -18,6 +18,36 @@
 -- from employees;
 
 
+-- -- Create Table
+-- CREATE TABLE Customers (
+--     customer_id INT PRIMARY KEY,
+--     customer VARCHAR(50),
+--     mode VARCHAR(20),
+--     city VARCHAR(50)
+-- );
+
+-- -- Insert Data
+-- INSERT INTO Customers (customer_id, customer, mode, city) VALUES
+-- (101, 'Olivia Barrett', 'Netbanking', 'Portland'),
+-- (102, 'Ethan Sinclair', 'Credit Card', 'Miami'),
+-- (103, 'Maya Hernandez', 'Credit Card', 'Seattle'),
+-- (104, 'Liam Donovan', 'Netbanking', 'Denver'),
+-- (105, 'Sophia Nguyen', 'Credit Card', 'New Orleans'),
+-- (106, 'Caleb Foster', 'Debit Card', 'Minneapolis'),
+-- (107, 'Ava Patel', 'Debit Card', 'Phoenix'),
+-- (108, 'Lucas Carter', 'Netbanking', 'Boston'),
+-- (109, 'Isabella Martinez', 'Netbanking', 'Nashville'),
+-- (110, 'Jackson Brooks', 'Credit Card', 'Boston');
+
+
+-- Select * from Customers;
+
+-- Select mode, count(mode)
+-- from Customers
+-- group by mode;
+
+
+
 DROP DATABASE college;
 CREATE DATABASE college;
 USE college;
@@ -39,6 +69,23 @@ VALUES
 (104, "hania", 96, "A", "Lahore"),
 (105, "rafay", 12, "F", "Lahore"),
 (106, "khadija", 82, "B", "Lahore");
+
+Update student
+set marks = marks + 1;
+
+Update student
+set marks = 68, grade = "D"
+Where rollno = 105;
+
+
+Update student
+set grade = "A"
+where grade  = "O";
+
+Select * from student;
+
+set sql_safe_updates = 0;
+
 
 Select city, count(city)
 from student
@@ -86,34 +133,6 @@ from student
 group by city
 order by avg_marks desc
 ;
-
--- Create Table
-CREATE TABLE Customers (
-    customer_id INT PRIMARY KEY,
-    customer VARCHAR(50),
-    mode VARCHAR(20),
-    city VARCHAR(50)
-);
-
--- Insert Data
-INSERT INTO Customers (customer_id, customer, mode, city) VALUES
-(101, 'Olivia Barrett', 'Netbanking', 'Portland'),
-(102, 'Ethan Sinclair', 'Credit Card', 'Miami'),
-(103, 'Maya Hernandez', 'Credit Card', 'Seattle'),
-(104, 'Liam Donovan', 'Netbanking', 'Denver'),
-(105, 'Sophia Nguyen', 'Credit Card', 'New Orleans'),
-(106, 'Caleb Foster', 'Debit Card', 'Minneapolis'),
-(107, 'Ava Patel', 'Debit Card', 'Phoenix'),
-(108, 'Lucas Carter', 'Netbanking', 'Boston'),
-(109, 'Isabella Martinez', 'Netbanking', 'Nashville'),
-(110, 'Jackson Brooks', 'Credit Card', 'Boston');
-
-
-Select * from Customers;
-
-Select mode, count(mode)
-from Customers
-group by mode;
 
 
 
