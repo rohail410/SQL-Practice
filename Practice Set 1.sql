@@ -70,11 +70,20 @@ VALUES
 (105, "rafay", 12, "F", "Lahore"),
 (106, "khadija", 82, "B", "Lahore");
 
+Delete from customers;
+
+select * from customers;
+
+Delete from student
+where rollno = 105;
+
+Select * from student;
+
 Update student
 set marks = marks + 1;
 
 Update student
-set marks = 68, grade = "D"
+set marks = 33, grade = "F"
 Where rollno = 105;
 
 
@@ -134,10 +143,44 @@ group by city
 order by avg_marks desc
 ;
 
+create table dept(
+	id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
 
 
+INSERT into dept 
+(id, name)
+VALUES
+(102, "IT")
+;
 
+Select * from dept;
 
+Update dept
+set name = "Department";
+
+Delete from dept
+where id = 102;
+
+CREATE TABLE teacher (
+	id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES dept(id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+INSERT INTO teacher
+(id, name, dept_id)
+VALUES
+(201, "Rohail", "102"),
+(202, "Ayaan", "101"),
+(203, "Haddiya", "101")
+;
+
+Select * from teacher;
 
 
 
