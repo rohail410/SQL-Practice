@@ -70,6 +70,47 @@ VALUES
 (105, "rafay", 12, "F", "Lahore"),
 (106, "khadija", 82, "B", "Lahore");
 
+Select * from student;
+
+ALTER TABLE student
+DROP COLUMN grade;
+
+DELETE from student
+WHERE marks < 80;
+
+ALTER TABLE student
+CHANGE COLUMN name full_name VARCHAR(50);
+
+Drop table student;
+
+ALTER TABLE stu
+RENAME TO student;
+
+ALTER TABLE student
+DROP COLUMN stu_age;
+
+
+Delete from student
+where rollno between 107 and 109;
+
+ALTER TABLE student
+CHANGE age stu_age INT;
+
+
+
+ALTER TABLE student
+MODIFY COLUMN age VARCHAR(2); 
+
+ALTER TABLE student
+ADD COLUMN age INT NOT NULL DEFAULT 19;
+
+INSERT INTO STUDENT
+(rollno, name, marks, stu_age)
+VALUES
+(110,"Don", 99, 100);
+
+
+
 Delete from customers;
 
 select * from customers;
@@ -182,7 +223,8 @@ VALUES
 
 Select * from teacher;
 
+TRUNCATE TABLE teacher;
 
-
+Select * from customers;
 
 
